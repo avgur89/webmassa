@@ -1,0 +1,71 @@
+/* -------- ABOUT PAGE -------- */
+.about {
+  padding-bottom: 30px;
+  background-image: url('../img/about-page-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  @include respond-to(769px) {
+    padding-bottom: 20px;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1200px) {
+    /* Medium screen, non-retina */
+    background-image: url("../img/about-page-bg1200.jpg");
+  }
+
+  @media only screen and (max-width: 768px) {
+    /* Medium screen, non-retina */
+    background-image: url("../img/about-page-bg768.jpg");
+  }
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 768px), only screen and (min-resolution: 2dppx) and (max-width: 768px) {
+    /* Medium screen, retina */
+    background-image: url("../img/about-page-bg768@2x.jpg");
+  }
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), only screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    /* Large screen, retina */
+    background-image: url('../img/about-page-bg.jpg');
+  }
+  .make-it-faster-wrapper {
+    padding: 25px 0;
+    text-align: center;
+    .make-it-faster-ico {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+    }
+  }
+  h1,
+  h4,
+  h5 {
+    text-align: center;
+  }
+  h5 {
+    padding: 20px 0;
+  }
+  h1 {
+    @include respond-to(769px) {
+      font-size: 5.5rem;
+      line-height: 1.14;
+      padding: 20px 0;
+    }
+  }
+  p {
+    margin-bottom: 0;
+  }
+  a:hover .strong-text {
+    color: $link-color-hover;
+  }
+  .center {
+    padding: 30px 0;
+    text-align: center;
+    @include respond-to(769px) {
+      padding: 20px 0;
+    }
+  }
+  .btn-wrapper {
+    text-align: center;
+  }
+}

@@ -1,0 +1,528 @@
+/* -------- HOME PAGE -------- */
+.main {
+  @extend %clearfix;
+}
+
+/* -------- CALL TO ACTION -------- */
+.cta {
+  position: relative;
+  min-height: 100vh;
+  @include respond-to(769px) {
+    min-height: auto;
+    padding-bottom: 56.2%;
+  };
+  @include respond-to(481px) {
+    padding-bottom: 0;
+    display: none;
+  };
+  .cta-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    @include respond-to(769px) {
+      background-size: contain;
+      background-position: 0 0;
+    };
+  }
+  .cta-slogan {
+    position: absolute;
+    width: 100%;
+    z-index: 30;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    h1 {
+      width: 100%;
+      margin: 0;
+      padding: 20px 0;
+      text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.6);
+      @include respond-to(1200px) {
+        font-size: 5.5rem;
+        line-height: 1.14;
+        padding: 10px 0;
+      };
+      @include respond-to(769px) {
+        font-size: 4rem;
+      };
+      @include respond-to(600px) {
+        font-size: 3.5rem;
+      };
+      @include respond-to(481px) {
+        font-size: 2.8rem;
+      };
+    }
+  }
+  .image-1 {
+    background-image: url('../img/Woodbesedka.jpg');
+    @media only screen and (min-width: 768px) and (max-width: 1200px) {
+      /* Medium screen, non-retina */
+      background-image: url("../img/Woodbesedka-bg1200.jpg");
+    }
+
+    @media only screen and (max-width: 768px) {
+      /* Medium screen, non-retina */
+      background-image: url("../img/Woodbesedka-bg768.jpg");
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 768px), only screen and (min-resolution: 2dppx) and (max-width: 768px) {
+      /* Medium screen, retina */
+      background-image: url("../img/Woodbesedka-bg768@2x.jpg");
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), only screen and (min-resolution: 2dppx) and (min-width: 768px) {
+      /* Large screen, retina */
+      background-image: url('../img/Woodbesedka.jpg');
+    }
+  }
+  .image-2 {
+    background-image: url('../img/Gardens.jpg');
+    @media only screen and (min-width: 768px) and (max-width: 1200px) {
+      /* Medium screen, non-retina */
+      background-image: url("../img/Gardens-bg1200.jpg");
+    }
+
+    @media only screen and (max-width: 768px) {
+      /* Medium screen, non-retina */
+      background-image: url("../img/Gardens-bg768.jpg");
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 768px), only screen and (min-resolution: 2dppx) and (max-width: 768px) {
+      /* Medium screen, retina */
+      background-image: url("../img/Gardens-bg768@2x.jpg");
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), only screen and (min-resolution: 2dppx) and (min-width: 768px) {
+      /* Large screen, retina */
+      background-image: url('../img/Gardens.jpg');
+    }
+  }
+  .image-3 {
+    background-image: url('../img/ImperialGarden.jpg');
+    @media only screen and (min-width: 768px) and (max-width: 1200px) {
+      /* Medium screen, non-retina */
+      background-image: url("../img/ImperialGarden-bg1200.jpg");
+    }
+
+    @media only screen and (max-width: 768px) {
+      /* Medium screen, non-retina */
+      background-image: url("../img/ImperialGarden-bg768.jpg");
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 768px), only screen and (min-resolution: 2dppx) and (max-width: 768px) {
+      /* Medium screen, retina */
+      background-image: url("../img/ImperialGarden-bg768@2x.jpg");
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), only screen and (min-resolution: 2dppx) and (min-width: 768px) {
+      /* Large screen, retina */
+      background-image: url('../img/ImperialGarden.jpg');
+    }
+  }
+  .image-4 {
+    background-image: url('../img/Bioshape.jpg');
+    @media only screen and (min-width: 768px) and (max-width: 1200px) {
+      /* Medium screen, non-retina */
+      background-image: url("../img/Bioshape-bg1200.jpg");
+    }
+
+    @media only screen and (max-width: 768px) {
+      /* Medium screen, non-retina */
+      background-image: url("../img/Bioshape-bg768.jpg");
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 768px), only screen and (min-resolution: 2dppx) and (max-width: 768px) {
+      /* Medium screen, retina */
+      background-image: url("../img/Bioshape-bg768@2x.jpg");
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), only screen and (min-resolution: 2dppx) and (min-width: 768px) {
+      /* Large screen, retina */
+      background-image: url('../img/Bioshape.jpg');
+    }
+  }
+}
+
+/* -------- BRAND HISTORY -------- */
+.brand-history {
+  text-align: center;
+  padding-bottom: 30px;
+  @include respond-to(769px) {
+    padding-bottom: 20px;
+  };
+  @extend %clearfix;
+  h2 {
+    @include respond-to(769px) {
+      padding: 20px 0;
+      line-height: 1.14;
+      font-size: 3.5rem;
+    };
+    @include respond-to(600px) {
+      font-size: 2.8rem;
+    };
+    @include respond-to(481px) {
+      font-size: 2.2rem;
+    };
+  }
+  .brand-history-item {
+    margin-bottom: 20px;
+    strong {
+      display: block;
+      margin-top: 10px;
+    }
+    p {
+      margin-bottom: 0;
+    }
+    a {
+      color: $text-color;
+      &:hover {
+        color: $text-color-hover;
+      }
+    }
+  }
+  .websites-ico {
+    @include respond-to(481px) {
+      width: 80px;
+      height: 120px;
+    };
+    .websites0,
+    .websites1,
+    .websites2,
+    .websites3 {
+      @extend .svg-transition;
+    }
+    &:hover .websites0 {
+      fill: #1f1f1f;
+    }
+    &:hover .websites1 {
+      fill: #ff756f;
+    }
+    &:hover .websites2 {
+      fill: #fff;
+    }
+    &:hover .websites3 {
+      fill: #0096af;
+    }
+  }
+  .brands-ico {
+    @include respond-to(481px) {
+      width: 80px;
+      height: 120px;
+    };
+    .brands0,
+    .brands1,
+    .brands2,
+    .brands3,
+    .brands4 {
+      @extend .svg-transition;
+    }
+    &:hover .brands0 {
+      fill: #0096af;
+    }
+    &:hover .brands1 {
+      fill: #fff;
+    }
+    &:hover .brands2 {
+      fill: #000;
+    }
+    &:hover .brands3 {
+      fill: #1f1f1f;
+    }
+    &:hover .brands4 {
+      fill: #ff756f;
+    }
+  }
+  .design-ico {
+    @include respond-to(481px) {
+      width: 80px;
+      height: 120px;
+    };
+    .design0,
+    .design1,
+    .design2,
+    .design3 {
+      @extend .svg-transition;
+    }
+    &:hover .design0 {
+      fill: #1F1F1F;
+    }
+    &:hover .design1 {
+      fill: #0096AF;
+    }
+    &:hover .design2 {
+      fill: #575757;
+    }
+    &:hover .design3 {
+      fill: #FF756F;
+    }
+  }
+}
+
+/* -------- WHO WE ARE -------- */
+.strong-text {
+  font-weight: bold;
+  color: $main-red;
+}
+
+.who-we-are {
+  background-image: url('../img/who-we-are-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  @media only screen and (min-width: 768px) and (max-width: 1200px) {
+    /* Medium screen, non-retina */
+    background-image: url("../img/who-we-are-bg1200.jpg");
+  }
+
+  @media only screen and (max-width: 768px) {
+    /* Medium screen, non-retina */
+    background-image: url("../img/who-we-are-bg768.jpg");
+  }
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 768px), only screen and (min-resolution: 2dppx) and (max-width: 768px) {
+    /* Medium screen, retina */
+    background-image: url("../img/who-we-are-bg768@2x.jpg");
+  }
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), only screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    /* Large screen, retina */
+    background-image: url('../img/who-we-are-bg.jpg');
+  }
+  h2 {
+    text-align: center;
+    @include respond-to(769px) {
+      padding: 20px 0;
+      line-height: 1.14;
+      font-size: 4rem;
+    };
+    @include respond-to(600px) {
+      font-size: 3.5rem;
+    };
+    @include respond-to(481px) {
+      font-size: 2.8rem;
+    };
+  }
+  .who-we-are-content {
+    padding-bottom: 30px;
+    @include respond-to(769px) {
+      padding-bottom: 20px;
+    };
+  }
+  .who-we-are-slogan {
+    text-align: center;
+    @include respond-to(481px) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* -------- PARTNERS -------- */
+.partners-cta {
+  padding-bottom: 30px;
+  text-align: center;
+  @include respond-to(769px) {
+    padding-bottom: 20px;
+  };
+  h3 {
+    @include respond-to(769px) {
+      padding: 20px 0;
+      font-size: 2.5rem;
+    };
+    @include respond-to(481px) {
+      font-size: 2rem;
+    };
+  }
+}
+
+.partners {
+  background-color: rgba(70, 130, 180, .6);
+  .partners-list {
+    margin: 0;
+    padding: 0 0 30px 0;
+    list-style-type: none;
+    @include respond-to(769px) {
+      padding: 0;
+    }
+    &:last-child {
+      padding-bottom: 30px;
+      @include respond-to(769px) {
+        padding-bottom: 20px;
+      }
+    }
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+      @include respond-to(769px) {
+        padding: 0 0 15px 0;
+      }
+    }
+    svg {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  /* -------- SVG PARTNER ICONS -------- */
+  .advertace-ico {
+    .adv1,
+    .adv2 {
+      @extend .svg-transition;
+    }
+    &:hover .adv1 {
+      fill: #dcad26;
+    }
+    &:hover .adv2 {
+      fill: #faf1bd;
+    }
+  }
+  .bioshape-ico {
+    .bio {
+      @extend .svg-transition;
+    }
+    &:hover .bio {
+      fill: #4e9434;
+    }
+  }
+  .gardens-pro-ico {
+    .gp1 {
+      @extend .svg-transition;
+    }
+    &:hover .gp1 {
+      fill: #ff2400;
+    }
+  }
+  .ig-ico {
+    .ig1,
+    .ig0 {
+      @extend .svg-transition;
+    }
+    &:hover .ig1 {
+      fill: #532b2b;
+    }
+    &:hover .ig0 {
+      fill: #f7cdbf;
+    }
+  }
+  .nextlevel-ico {
+    .nl0,
+    .nl1 {
+      @extend .svg-transition;
+    }
+    &:hover .nl0 {
+      fill: #c33;
+    }
+    &:hover .nl1 {
+      fill: #000;
+    }
+  }
+  .nivaki-ico {
+    .niv0,
+    .niv1 {
+      @extend .svg-transition;
+    }
+    &:hover .niv0 {
+      fill: #db3427;
+    }
+    &:hover .niv1 {
+      fill: #000;
+    }
+  }
+  .raigorodka-ico {
+    .rg0,
+    .rg1,
+    .rg2,
+    .rg3,
+    .rg4 {
+      @extend .svg-transition;
+    }
+    &:hover .rg0 {
+      fill: #ef7f1a;
+    }
+    &:hover .rg1 {
+      fill: #4fa800;
+    }
+    &:hover .rg2 {
+      fill: none;
+    }
+    &:hover .rg3 {
+      fill: #85360f;
+    }
+    &:hover .rg4 {
+      fill: #85360f;
+    }
+  }
+  .veles-ico {
+    .vl0,
+    .vl1,
+    .vl2 {
+      @extend .svg-transition;
+    }
+    &:hover .vl0 {
+      fill: #000;
+    }
+    &:hover .vl1 {
+      fill: #782828;
+    }
+    &:hover .vl2 {
+      fill: #fefefe;
+    }
+  }
+  .woodbesedka-ico {
+    .wb0 {
+      @extend .svg-transition;
+    }
+    &:hover .wb0 {
+      fill: #000;
+    }
+  }
+  .dream-dacha-ico {
+    .dd0,
+    .dd1,
+    .dd2 {
+      @extend .svg-transition;
+    }
+    &:hover .dd0 {
+      fill: #00a0e3;
+    }
+    &:hover .dd1 {
+      fill: #437b2f;
+    }
+    &:hover .dd2 {
+      fill: #437b2f;
+    }
+  }
+  .felco-ico {
+    .felco0,
+    .felco1,
+    .felco2 {
+      @extend .svg-transition;
+    }
+    &:hover .felco0 {
+      fill: #2b2a29;
+    }
+    &:hover .felco1 {
+      fill: #e31e24;
+    }
+    &:hover .felco2 {
+      fill: #fefefe;
+    }
+  }
+  .sholtz-ico {
+    .sholtz0,
+    .sholtz1 {
+      @extend .svg-transition;
+    }
+    &:hover .sholtz0 {
+      fill: #009846;
+    }
+    &:hover .sholtz1 {
+      fill: white;
+    }
+  }
+}

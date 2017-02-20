@@ -1,0 +1,225 @@
+/* -------- CONTACTS PAGE -------- */
+.contacts {
+  max-width: 650px;
+  padding-bottom: 30px;
+  text-align: center;
+  @include respond-to(769px) {
+    max-width: 100%;
+  };
+  h1 {
+    padding-bottom: 0;
+    @include respond-to(769px) {
+      font-size: 5.5rem;
+      line-height: 1.14;
+    };
+  }
+  p {
+    font-size: $font-size-links;
+  }
+  .subtitle {
+    @include respond-to(481px) {
+      font-size: 1.6rem;
+    };
+  }
+}
+
+/* -------- CHOOSE PROJECT -------- */
+.project-choice {
+  @extend %clearfix;
+  .project-choice-item {
+    margin: 0;
+    padding: 0;
+    .dev-ico,
+    .design-ico {
+      cursor: pointer;
+      max-width: 100%;
+      @include respond-to(481px) {
+        width: 80px;
+        height: 80px;
+      };
+    }
+    a {
+      display: block;
+    }
+    .strong-text {
+      cursor: default;
+      font-size: 1.8rem;
+      @include respond-to(481px) {
+        font-size: 1.6rem;
+      };
+    }
+  }
+}
+
+/* -------- CONTACT US -------- */
+.contact-us {
+  @extend %clearfix;
+  max-width: 350px;
+  margin: 40px auto 0 auto;
+  @include respond-to(481px) {
+    max-width: 300px;
+  };
+  p {
+    @include respond-to(481px) {
+      font-size: 1.6rem;
+    };
+  }
+}
+
+/* -------- CONTACT PHONES -------- */
+.contact-phone {
+  @extend %clearfix;
+  .contact-phone-ico {
+    float: left;
+    padding: 8px 8px 0 0;
+  }
+  p {
+    float: left;
+    margin-bottom: 0;
+    font-size: $font-size-small;
+    line-height: 1.6;
+    @include respond-to(481px) {
+      font-size: $font-size-small;
+    };
+  }
+}
+
+/* -------- CONTACT EMAIL -------- */
+.contact-email {
+  @extend %clearfix;
+  @include respond-to(481px) {
+    margin-top: 20px;
+  };
+  .contact-email-ico {
+    float: left;
+    width: 35px;
+    padding: 6px 8px 0 0;
+  }
+  .contact-email-link {
+    float: left;
+    margin-bottom: 0;
+    line-height: 1.6;
+    font-size: $font-size-small;
+    a {
+      font-size: $font-size-small;
+      font-weight: $font-weight;
+      color: $text-color;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+/* -------- FORM -------- */
+.design-form,
+.development-form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+  display: none;
+  margin-top: 10px;
+  .message p {
+    margin-bottom: 0;
+    padding: 5px 0 0 5px;
+    color: tomato;
+    @include respond-to(481px) {
+      font-size: 1.4rem; 
+    };
+  }
+
+  /* -------- Radio Buttons -------- */
+  .radio-btn-label {
+		display: block;
+		cursor: pointer;
+		font-size: 16px;
+    margin: 5px 0 5px 0px;
+    line-height: 15px;
+	}
+  .radio-btn-label:before {
+		content: "";
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		vertical-align: middle;
+		background-color: $main-bg;
+		color: $main-red;
+		text-align: center;
+		box-shadow: inset 0px 0px 0px 1px rgba(204, 102, 102, .9);
+		font-size: 35px;
+    margin-right: 5px;
+		border-radius: 100%;
+	}
+	input[type=radio]{
+		display:none;
+	}
+	input[type=radio]:checked + .radio-btn-label:before {
+		content: "\2022";
+	}
+
+  /* -------- Select -------- */
+  .options-wrapper {
+    margin-top: 30px;
+    select {
+      outline: none;
+      padding: 1px 0;
+      border: 2px solid $main-red;
+  		-webkit-appearance: none;    /* Removes default chrome and safari style */
+  		-moz-appearance: none;       /* Removes Default Firefox style */
+      appearance:none;
+  		background: url(../img/contact-arrow.png) no-repeat 95% center;
+  		width: 200px;                /* Width of select dropdown to give space for arrow image */
+  		text-indent: 0.01px;         /* Removes default arrow from firefox */
+  		text-overflow: "";           /* Removes default arrow from firefox */ /* My custom style for fonts */
+      background-color: $main-bg;
+      cursor: pointer;
+    }
+  }
+  .purpose-btn-wrapper,
+  .url,
+  .name,
+  .email,
+  .message-wrapper {
+    display: block;
+    margin-top: 30px;
+  }
+
+  /* -------- Inputs -------- */
+  input[type=text],
+  input[type=email] {
+    background-color: $main-bg;
+    border: 2px solid $main-red;
+    color: $text-color;
+    border-radius: 0;
+  }
+
+  /* -------- Textarea -------- */
+  .message-wrapper {
+    p {
+      margin: 0;
+    }
+    textarea {
+      outline: none;
+      padding: 10px;
+      width: 100%;
+      font-size: $font-size-small;
+      line-height: 1.4;
+      background-color: $main-bg;
+      border: 2px solid $main-red;
+    }
+  }
+
+  /* -------- Submit button -------- */
+  .submit-btn-wrapper {
+    margin-top: 30px;
+    text-align: center;
+    button {
+      border: none;
+      outline: none;
+    }
+  }
+}
+
+.active-form {
+  display: block;
+}

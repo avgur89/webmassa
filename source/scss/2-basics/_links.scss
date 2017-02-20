@@ -1,0 +1,25 @@
+/* -------- LINKS -------- */
+a {
+  font-size: $font-size-links;
+  font-weight: bold;
+  color: $link-color;
+  outline: none;
+  transition: all .2s linear;
+  text-decoration: none;
+
+  &:hover {
+    color: $link-color-hover;
+  }
+
+  &:focus,
+  &:active {
+    color: #f4f4f4;
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+.svg-transition {
+  cursor: pointer;
+  transition: all .2s ease;
+}

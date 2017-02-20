@@ -1,0 +1,94 @@
+/* -------- SERVICES PAGE -------- */
+.services {
+  padding-bottom: 30px;
+  background-image: url('../img/services-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  @include respond-to(769px) {
+    padding-bottom: 20px;
+  };
+  @media only screen and (min-width: 768px) and (max-width: 1200px) {
+    /* Medium screen, non-retina */
+    background-image: url("../img/services-bg1200.jpg");
+  }
+
+  @media only screen and (max-width: 768px) {
+    /* Medium screen, non-retina */
+    background-image: url("../img/services-bg768.jpg");
+  }
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 768px), only screen and (min-resolution: 2dppx) and (max-width: 768px) {
+    /* Medium screen, retina */
+    background-image: url("../img/services-bg768@2x.jpg");
+  }
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), only screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    /* Large screen, retina */
+    background-image: url('../img/services-bg.jpg');
+  }
+  h1 {
+    text-align: center;
+    @include respond-to(769px) {
+      font-size: 5.5rem;
+      line-height: 1.14;
+      padding: 20px 0;
+    };
+  }
+  p {
+    margin-bottom: 0;
+  }
+  .go-live-btn {
+    padding-top: 30px;
+    text-align: center;
+    @include respond-to(769px) {
+      padding-top: 20px;
+    };
+  }
+  a:hover .strong-text {
+    color: $link-color-hover;
+  }
+}
+
+.services-items-wrapper {
+  @extend %clearfix;
+  margin: 20px 0 80px 0;
+  @include respond-to(769px) {
+    margin: 20px 0 30px 0;
+  };
+}
+
+.services-item {
+  text-align: center;
+  @include respond-to(769px) {
+    margin-bottom: 30px;
+  };
+  .svg-ico {
+    max-width: 100%;
+    cursor: pointer;
+    @include respond-to(769px) {
+      width: 115px;
+      height: 115px;
+    };
+  }
+  .strong-text {
+    display: block;
+    margin: 15px 0 5px 0;
+    font-size: 2rem;
+    @include respond-to(481px) {
+      margin: 10px 0 5px 0;
+    };
+  }
+  a {
+    display: inline-block;
+  }
+  .services-item-list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    li {
+      font-size: $font-size-links;
+      line-height: 1.4;
+    }
+  }
+}

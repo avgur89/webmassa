@@ -1,0 +1,212 @@
+/* -------- HEADER  -------- */
+.header {
+  padding: 5px 0 20px 0;
+  border-bottom: 3px solid #{$main-red};
+  @include respond-to(768px) {
+    padding: 5px 0 15px 0;
+  };
+  @extend %clearfix;
+  .container {
+    position: relative;
+  }
+}
+
+/* -------- LOGO  -------- */
+.header-logo {
+  .header-logo-link {
+    display: block;
+  }
+  .header-logo-ico {
+    width: auto;
+    max-width: 200px;
+    max-height: 55px;
+    @include respond-to(768px) {
+      max-width: 180px;
+      max-height: 45px;
+    };
+    @include respond-to(480px) {
+      max-width: 150px;
+      max-height: 40px;
+    };
+  }
+}
+
+/* -------- NAVIGATION  -------- */
+.header-nav {
+  transition: left .2s ease-out .2s;
+  @include respond-to(768px) {
+    width: 100%;
+    float: none;
+    position: fixed;
+  	z-index: 999;
+  	top: 0;
+  	left: 0;
+    padding: 0;
+    overflow-y: scroll;
+  	width: 250px;
+  	border: none;
+  	margin: 0;
+  	height: 100%;
+  	margin-left: -100%; /* hide */
+  	transition: .5s margin-left ease;
+  	box-shadow: 1px 0 4px rgba(0, 0, 0, .4);
+    background-color: #1F1F1F;
+  };
+  .header-logo-mobile {
+    display: none;
+    @include respond-to(768px) {
+      display: block;
+      text-align: center;
+    };
+  }
+  .close-menu-btn {
+    display: none;
+    @include respond-to(768px) {
+      display: block;
+      text-align: right;
+    };
+    .close-menu-btn-ico {
+      @include respond-to(768px) {
+        width: 35px;
+        height: 35px;
+        margin: 5px;
+        padding: 5px;
+        cursor: pointer;
+      };
+    }
+  }
+}
+
+.header-nav-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  float: right;
+  @include respond-to(768px) {
+    margin-top: 40px;
+    float: none;
+  };
+  li {
+    display: inline-block;
+    text-align: right;
+    margin-left: 50px;
+    &:first-child {
+      margin-left: 0;
+    }
+    @include respond-to(960px) {
+      margin-left: 25px;
+    };
+    @include respond-to(768px) {
+      display: block;
+      text-align: center;
+      margin-left: 0;
+    };
+    a {
+      display: inline-block;
+      padding: 5px 10px;
+      @include respond-to(768px) {
+        display: block;
+        width: 100%;
+        padding: 15px 0;
+        color: $link-color;
+      };
+      &:hover {
+        text-decoration: none;
+        @include respond-to(768px) {
+          color: $link-color-hover;
+        };
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.header-nav.active {
+  margin-left: 0;
+}
+
+/* -------- HAMBURGER ICON -------- */
+.menu-ico-wrapper {
+  text-align: right;
+  display: none;
+  @include respond-to(768px) {
+    display: block;
+    vertical-align: bottom;
+  }
+}
+.menu-ico {
+  display: none;
+  width: 30px;
+  cursor: pointer;
+  @include respond-to(768px) {
+    display: inline-block;
+    vertical-align: bottom;
+  }
+  &:hover .divide {
+    background-color: $link-color-hover;
+  }
+  .divide {
+    display: block;
+    height: 3px;
+    margin: 4px 0;
+    background-color: $link-color;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* -------- CHOOSE LANGUAGE  -------- */
+.flag-wrapper {
+  text-align: right;
+  @extend %clearfix;
+  svg {
+    position: relative;
+    z-index: 870;
+    width: 35px;
+    height: auto;
+    padding: 3px;
+    cursor: pointer;
+    @include respond-to(768px) {
+      width: 30px;
+    };
+  }
+  .spain-flag {
+    padding-right: 0;
+  }
+  .eng-flag-active {
+    .uk0 {
+      fill: #2D3152;
+    }
+    .uk1 {
+      fill: #D82135;
+    }
+    .uk2 {
+      fill: #FEFEFE;
+    }
+  }
+  .rus-flag-active {
+    .rus0 {
+      fill: #fff;
+    }
+    .rus1 {
+      fill: #D52B1E;
+    }
+    .rus2 {
+      fill: #0039A6;
+    }
+  }
+  .spain-flag-active {
+    .spa0 {
+      fill: #FADE13;
+    }
+    .spa1 {
+      fill: #fff;
+    }
+    .spa2 {
+      fill: #D43546;
+    }
+  }
+}

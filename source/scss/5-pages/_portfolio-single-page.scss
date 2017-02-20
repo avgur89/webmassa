@@ -1,0 +1,36 @@
+/* -------- PORTFOLIO SINGLE PAGE -------- */
+.single-project {
+  padding-bottom: 40px;
+  text-align: center;
+  @extend %clearfix;
+  h2 {
+    text-align: center;
+    @include respond-to(1200px) {
+      font-size: 4rem;
+      line-height: 1.14;
+      padding: 20px 0;
+    }
+    @include respond-to(769px) {
+      font-size: 3.5rem;
+    }
+    @include respond-to(600px) {
+      font-size: 3rem;
+    }
+    @include respond-to(481px) {
+      font-size: 2.5rem;
+    }
+  }
+  p {
+    text-align: left;
+  }
+  .single-project-list {
+    list-style-type: none;
+    padding: 10px 0;
+    margin: 0;
+    text-align: left;
+  }
+  .btn-wrapper {
+    margin: 40px 0;
+    text-align: center;
+  }
+}

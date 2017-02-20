@@ -1,0 +1,7 @@
+npm install -g node-gyp
+for package in `ls node_modules`; do npm uninstall $package; done;
+npm update;
+npm outdated;
+
+npm install -g npm-check-updates
+npm-check-updates -u
